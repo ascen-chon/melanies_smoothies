@@ -30,6 +30,8 @@ ingredients_list = st.multiselect(
     my_dataframe,
     max_selections=5)
 
+import requests
+
 if ingredients_list:
     #st.write(ingredients_list)
     #st.text (ingredients_list)
@@ -57,7 +59,6 @@ if ingredients_list:
         #st.success('Your Smoothie is ordered!', icon="✅")
         st.success(f'Your Smoothie is ordered, {name_on_order}!', icon="✅")
 
-    import requests
     
     
     #st.text(smoothiefroot_response.json())
