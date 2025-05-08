@@ -39,6 +39,8 @@ ingredients_list = st.multiselect(
 
 import requests
 
+search_on=pd_df.loc[pd_df['FRUIT_NAME']== fruit_choosen, 'SEARCH_ON'].iloc[0]
+
 if ingredients_list:
     #st.write(ingredients_list)
     #st.text (ingredients_list)
