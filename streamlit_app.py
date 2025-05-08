@@ -10,6 +10,7 @@ st.write(
   """
 )
 
+search_on=pd_df.loc[pd_df['FRUIT_NAME']== fruit_choosen, 'SEARCH_ON'].iloc[0]
 name_on_order = st.text_input('Name on Smoothie')
 st.write('The name on your Smoothie will be', name_on_order)
 cnx = st.connection ("snowflake")
@@ -38,8 +39,6 @@ ingredients_list = st.multiselect(
     max_selections=5)
 
 import requests
-
-search_on=pd_df.loc[pd_df['FRUIT_NAME']== fruit_choosen, 'SEARCH_ON'].iloc[0]
 
 if ingredients_list:
     #st.write(ingredients_list)
